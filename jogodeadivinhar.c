@@ -13,15 +13,26 @@ int main(void)
 
     do
     {
-        printf("%d\n\n", aleatorio);
         printf("digite um numero: ");
 
         scanf("%d", &palpite);
         tentativas++;
+        system("clear");
 
+        if(palpite < aleatorio)
+        {
+            printf("\nestou pensando em um numero maior\n\n");
+        }
+        else if(palpite > aleatorio)
+        {
+            printf("\no numero que estou pensando e menor que esse\n\n");
+        }
+        else
+        {
+            printf("\n%d!! isso mesmo, voce acertou em %d tentativas, parabens!\n\n", aleatorio, tentativas);
+        }
     }
 while(palpite != aleatorio);
-printf("\nvoce acertou em %d tentativas, parabens!\n\n", tentativas);
 return 0;
 }
 
