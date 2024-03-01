@@ -1,4 +1,4 @@
-# Jogos de adivinhar valores de 1 a 100
+# Jogo de adivinhar valores de 1 a 100
 
 ### Descrição:
 É um jogo no qual o objetivo é acertar o número que a máquina está 'pensando' com o menor número possível de tentativas.
