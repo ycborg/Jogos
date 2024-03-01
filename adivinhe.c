@@ -18,22 +18,24 @@ int main(void) {
 
         int i = scanf("%d", &palpite);
 
+        system("cls || clear");
+
         if (i != 1) {
 			fflush(stdin);
-            system("cls || clear");
             printf("So funciona com numeros.\n\n");
             continue;
+        } else if (palpite < 1 || palpite > 100) {
+            printf("Pensei em um numero entre 1 e 100.\n\n");
+            continue;
         }
-
         tentativas++;
-        system("cls || clear");
 
         if (palpite < aleatorio)
             printf("Estou pensando em um numero maior.\n\n");
         else if (palpite > aleatorio)
             printf("O numero que estou pensando e menor que esse.\n\n");
         else
-            printf("\t%d!! Isso mesmo, voce acertou em %d tentativas, parabens!\n\n", aleatorio, tentativas);
+            printf("\t%d Isso mesmo!! Voce acertou em %d tentativas, parabens!\n\n", aleatorio, tentativas);
     }
     while(palpite != aleatorio);
     return 0;
