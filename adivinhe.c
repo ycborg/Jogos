@@ -3,11 +3,9 @@
 #include <time.h>
 
 int main(void) {
-
-    system("cls || clear");
-
     int aleatorio, palpite, tentativas = 0;
 
+    system("cls || clear");
     srand(time(NULL));
     aleatorio = rand() % 100 + 1;
 
@@ -15,7 +13,6 @@ int main(void) {
 
     do {
         printf("Digite um numero: ");
-
         int i = scanf("%d", &palpite);
 
         system("cls || clear");
@@ -30,12 +27,9 @@ int main(void) {
         }
         tentativas++;
 
-        if (palpite < aleatorio)
-            printf("Estou pensando em um numero maior.\n\n");
-        else if (palpite > aleatorio)
-            printf("O numero que estou pensando e menor que esse.\n\n");
-        else
-            printf("\t%d Isso mesmo!! Voce acertou em %d tentativas, parabens!\n\n", aleatorio, tentativas);
+        if (palpite < aleatorio) printf("Estou pensando em um numero maior.\n\n");
+        else if (palpite > aleatorio) printf("O numero que estou pensando e menor que esse.\n\n");
+        else printf("\t%d Isso mesmo!! Voce acertou em %d tentativas, parabens!\n\n", aleatorio, tentativas);
     }
     while(palpite != aleatorio);
     return 0;
